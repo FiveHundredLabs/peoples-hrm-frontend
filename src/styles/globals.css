@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand & Accent per BMW DESIGN.md */
+  --color-primary: #1c69d4;
+  --color-primary-active: #0653b6;
+  --color-on-primary: #ffffff;
+  --color-m-blue-light: #0066b1;
+  --color-m-blue-dark: #1c69d4;
+  --color-m-red: #e22718;
+
+  /* Surfaces per BMW DESIGN.md */
+  --color-canvas: #ffffff;
+  --color-surface-soft: #f7f7f7;
+  --color-surface-card: #fafafa;
+  --color-surface-strong: #ebebeb;
+  --color-surface-dark: #1a2129;
+  --color-surface-dark-elevated: #262e38;
+  --color-hairline: #e6e6e6;
+  --color-hairline-strong: #cccccc;
+
+  /* Text & Ink per BMW DESIGN.md */
+  --color-ink: #262626;
+  --color-body-strong: #1a1a1a;
+  --color-body: #3c3c3c;
+  --color-muted: #6b6b6b;
+  --color-muted-soft: #9a9a9a;
+  --color-on-dark: #ffffff;
+  --color-on-dark-soft: #bbbbbb;
+
+  /* Semantic */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #dc2626;
+  --color-semantic-up: #22c55e;
+  --color-semantic-down: #dc2626;
+  --color-semantic-success: #22c55e;
+  --color-semantic-error: #dc2626;
+
+  /* Theme Aliases */
+  --color-canvas-soft: #f7f7f7;
+  --color-canvas-softer: #fafafa;
+  --color-surface-pressed: #ebebeb;
+  --color-link: #1c69d4;
+  --color-link-blue: #1c69d4;
+  --color-link-hover: #0653b6;
+  --color-sidebar: #1a2129;
+  --color-sidebar-border: #262e38;
+  --color-black-elevated: #262e38;
+  --color-canvas-night: #1a2129;
+  --color-canvas-night-soft: #262e38;
+
+  /* Border Radii per BMW DESIGN.md: 0px rectangular for everything */
+  --radius-none: 0px;
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-pill: 0px;
+  --radius-full: 9999px;
+
+  /* Typography per BMW DESIGN.md: 700 Bold Display, 300 Light Body */
+  --font-display: 'BMW Type Next Latin', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'BMW Type Next Latin', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevation: BMW uses flat color-blocks with zero drop shadow */
+  --shadow-none: none;
+  --shadow-level-1: none;
+  --shadow-level-2: none;
+  --shadow-level-3: none;
+}
+
+:root {
+  --font-sans: 'BMW Type Next Latin', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'BMW Type Next Latin', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* BMW 700 Display Headline Rule */
+h1, h2, h3, h4, h5, h6,
+.font-display,
+.font-bold {
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+/* Align Date Inputs Systemwide */
+input[type="date"] {
+  position: relative;
+  text-align: left;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.12s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Clean Custom Selects Systemwide */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b6b6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+  padding-right: 40px !important;
+  cursor: pointer;
+}
+
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #f7f7f7;
+}
+
+/* Button Utilities per BMW DESIGN.md */
+.btn-primary,
+.btn-primary-pill {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: 0px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  transition: background-color 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover,
+.btn-primary-pill:hover {
+  background-color: var(--color-primary-active);
+}
+
+.btn-secondary,
+.btn-secondary-pill,
+.btn-outline-pill {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline-strong);
+  border-radius: 0px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  transition: all 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover,
+.btn-secondary-pill:hover,
+.btn-outline-pill:hover {
+  background-color: var(--color-surface-soft);
+  border-color: var(--color-ink);
+}
+
+.btn-subtle {
+  background-color: var(--color-surface-soft);
+  color: var(--color-ink);
+  border-radius: 0px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  transition: background-color 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-subtle:hover {
+  background-color: var(--color-surface-strong);
+}
+
+.btn-on-dark {
+  background-color: transparent;
+  color: var(--color-on-dark);
+  border: 1px solid var(--color-on-dark);
+  border-radius: 0px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  transition: background-color 0.12s ease;
+}
+
+.btn-on-dark:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Category Tab per BMW DESIGN.md */
+.category-tab {
+  background-color: transparent;
+  color: var(--color-muted);
+  border-radius: 0px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.12s ease;
+}
+
+.category-tab:hover {
+  background-color: var(--color-surface-soft);
+  color: var(--color-ink);
+}
+
+.category-tab-active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0px;
+}
+
+/* Model / Feature card */
+.model-card,
+.feature-card {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
+  border-radius: 0px;
+  padding: 24px;
+}
+
+/* Code block */
+.code-block {
+  background-color: var(--color-surface-dark);
+  color: var(--color-on-dark);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border-radius: 0px;
+  padding: 20px;
+  border: 1px solid var(--color-surface-dark-elevated);
+}
+
+/* ==========================================================================
+   Scrollbar Styles (BMW Clean Pure White & Dark Navy)
+   ========================================================================== */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-hairline-strong) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-hairline-strong);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Dark Sidebar Scrollbar (#1a2129 theme) */
+.scrollbar-sidebar,
+aside nav,
+aside {
+  scrollbar-width: thin;
+  scrollbar-color: #262e38 transparent;
+}
+
+.scrollbar-sidebar::-webkit-scrollbar,
+aside nav::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-sidebar::-webkit-scrollbar-track,
+aside nav::-webkit-scrollbar-track,
+aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-sidebar::-webkit-scrollbar-thumb,
+aside nav::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb {
+  background: #262e38;
+  border-radius: 0px;
+}
+
+.scrollbar-sidebar::-webkit-scrollbar-thumb:hover,
+aside nav::-webkit-scrollbar-thumb:hover,
+aside::-webkit-scrollbar-thumb:hover {
+  background: #3a4452;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
