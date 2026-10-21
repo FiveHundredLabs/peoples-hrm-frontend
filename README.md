@@ -26,6 +26,8 @@ Frontend demo for the Sri Lanka HRMS & Payroll system built with **React 19**, *
 npm ci
 ```
 
+Use npm for this project and commit `package-lock.json` whenever dependencies change. Keep it as the only package-manager lockfile so local and hosted builds install the same dependency versions.
+
 ### Environment Configuration
 No environment configuration is required. `.env.example` contains only the optional application title.
 
@@ -60,6 +62,10 @@ npm run build
 ```
 
 ---
+
+## Deploying to Vercel
+
+The committed `vercel.json` configures the Vite build with `npm ci`, `npm run build`, and the `dist` output directory. Commit and push dependency changes together with `package-lock.json`, then deploy the new commit. No backend environment variables are required.
 
 ## Deploying to Dokploy
 
