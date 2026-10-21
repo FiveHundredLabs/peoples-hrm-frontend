@@ -13,7 +13,7 @@ import {
   Database,
   Flame,
 } from 'lucide-react';
-import { useStorageConfig, useUpdateStorageConfig, useTestStorageConnection } from '../api/storage-api';
+import { useStorageConfig, useUpdateStorageConfig, useTestStorageConnection } from '../data/storage-data';
 import { storageSchema, StorageFormValues } from '../schemas/storage.schema';
 import { StorageProviderType, StorageTestResult } from '../types/storage';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';

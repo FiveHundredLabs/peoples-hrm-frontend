@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useRoles, usePermissions } from '../../auth/api/auth-api';
+import { useRoles, usePermissions } from '../../auth/data/auth-data';
 import { Role, Permission, RolePermission } from '../../auth/types/auth';
 import { RoleModal } from '../components/role-modal';
 import { Button } from '../../../components/ui/button';

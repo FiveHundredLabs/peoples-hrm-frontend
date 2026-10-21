@@ -30,8 +30,8 @@ import {
   useWebhooks,
   useRegisterWebhook,
   useToggleWebhook,
-} from '../api/operations-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/operations-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 
 export const OperationsHubPage: React.FC = () => {

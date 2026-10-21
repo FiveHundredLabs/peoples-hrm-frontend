@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getMockFileUrl } from '../../../mocks/store';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -31,8 +32,8 @@ import {
   useDeleteEmployee,
   useDeleteDocument,
   useDeleteBankAccount,
-} from '../api/employee-api';
-import { useMovements } from '../../lifecycle/api/lifecycle-api';
+} from '../data/employee-data';
+import { useMovements } from '../../lifecycle/data/lifecycle-data';
 import { EmploymentStatus, EmployeeDocument, EmployeeBankAccount } from '../types/employee';
 import { cn } from '../../../lib/utils';
 import { ImageCropperModal } from '../../../components/shared/image-cropper-modal';
@@ -261,7 +262,7 @@ export const EmployeeDetailPage: React.FC = () => {
             <div className="relative group h-16 w-16 shrink-0 overflow-hidden bg-[#1c69d4] border border-[#e6e6e6]">
               {profileFileId && !imgError ? (
                 <img
-                  src={`/api/v1/storage/files/${profileFileId}/view?v=${photoVersion}`}
+                  src={getMockFileUrl(profileFileId)}
                   alt={employee.displayName}
                   className="h-full w-full object-cover"
                   onError={() => setImgError(true)}
@@ -676,7 +677,7 @@ export const EmployeeDetailPage: React.FC = () => {
                       {fileId && (
                         <>
                           <a
-                            href={`/api/v1/storage/files/${fileId}/view`}
+                            href={getMockFileUrl(fileId)}
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center gap-1 text-xs px-2.5 py-1 border border-[#e6e6e6] bg-[#fafafa] text-ink hover:bg-[#f0f0f0] transition-colors"
@@ -684,7 +685,7 @@ export const EmployeeDetailPage: React.FC = () => {
                             <Eye className="h-3.5 w-3.5 text-[#1c69d4]" /> View
                           </a>
                           <a
-                            href={`/api/v1/storage/files/${fileId}/download`}
+                            href={getMockFileUrl(fileId)}
                             download
                             className="inline-flex items-center gap-1 text-xs px-2.5 py-1 border border-[#e6e6e6] bg-[#fafafa] text-ink hover:bg-[#f0f0f0] transition-colors"
                           >

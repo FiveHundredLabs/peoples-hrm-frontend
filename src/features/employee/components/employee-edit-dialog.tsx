@@ -6,7 +6,7 @@ import { Input } from '../../../components/ui/input';
 import { Label } from '../../../components/ui/label';
 import { Select } from '../../../components/ui/select';
 import { Employee } from '../types/employee';
-import { useUpdateEmployee } from '../api/employee-api';
+import { useUpdateEmployee } from '../data/employee-data';
 import { User, Mail, Calendar, AlertCircle } from 'lucide-react';
 
 export interface EmployeeEditDialogProps {

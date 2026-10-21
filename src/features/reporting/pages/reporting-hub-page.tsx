@@ -33,7 +33,7 @@ import {
   useCreateReportSchedule,
   useAuditEvents,
   downloadCsv,
-} from '../api/reporting-api';
+} from '../data/reporting-data';
 import { cn } from '../../../lib/utils';
 import { AuditEvent } from '../types/reporting';
 

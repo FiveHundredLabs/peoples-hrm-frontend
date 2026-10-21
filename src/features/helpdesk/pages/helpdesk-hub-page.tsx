@@ -23,8 +23,8 @@ import {
   useCreateHelpdeskTicket,
   useUpdateTicketStatus,
   useAddHelpdeskMessage,
-} from '../api/helpdesk-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/helpdesk-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { HelpdeskTicket } from '../types/helpdesk';
 

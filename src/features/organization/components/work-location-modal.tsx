@@ -7,7 +7,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { workLocationSchema, WorkLocationFormValues } from '../schemas/organization.schema';
 import { LegalEntity, Branch } from '../types/organization';
-import { useCreateWorkLocation } from '../api/organization-api';
+import { useCreateWorkLocation } from '../data/organization-data';
 
 export interface WorkLocationModalProps {
   isOpen: boolean;

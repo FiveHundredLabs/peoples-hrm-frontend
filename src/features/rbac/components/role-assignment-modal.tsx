@@ -7,7 +7,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { assignUserRoleSchema, AssignUserRoleFormValues } from '../../auth/schemas/auth.schema';
 import { Role, User } from '../../auth/types/auth';
-import { useAssignUserRole } from '../../auth/api/auth-api';
+import { useAssignUserRole } from '../../auth/data/auth-data';
 
 export interface RoleAssignmentModalProps {
   isOpen: boolean;

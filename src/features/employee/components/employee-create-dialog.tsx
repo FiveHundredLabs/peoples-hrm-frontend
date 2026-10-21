@@ -10,8 +10,8 @@ import {
   createEmployeeSchema,
   CreateEmployeeFormValues,
 } from '../schemas/employee.schema';
-import { useCreateEmployee } from '../api/employee-api';
-import { useLegalEntities, useDepartments, useBranches, usePositions } from '../../organization/api/organization-api';
+import { useCreateEmployee } from '../data/employee-data';
+import { useLegalEntities, useDepartments, useBranches, usePositions } from '../../organization/data/organization-data';
 import { CreditCard, ShieldCheck, CheckCircle2, AlertCircle } from 'lucide-react';
 
 interface EmployeeCreateDialogProps {

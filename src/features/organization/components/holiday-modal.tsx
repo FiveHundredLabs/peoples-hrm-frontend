@@ -8,7 +8,7 @@ import { Checkbox } from '../../../components/ui/checkbox';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { holidaySchema, HolidayFormValues } from '../schemas/organization.schema';
 import { HolidayCalendar } from '../types/organization';
-import { useCreateHoliday } from '../api/organization-api';
+import { useCreateHoliday } from '../data/organization-data';
 
 export interface HolidayModalProps {
   isOpen: boolean;

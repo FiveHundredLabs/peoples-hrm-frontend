@@ -29,8 +29,8 @@ import {
   useCreateOffer,
   useAcceptOffer,
   useOnboardingCases,
-} from '../api/recruitment-api';
-import { useJobs, useDepartments } from '../../organization/api/organization-api';
+} from '../data/recruitment-data';
+import { useJobs, useDepartments } from '../../organization/data/organization-data';
 import { cn } from '../../../lib/utils';
 import { Interview } from '../types/recruitment';
 

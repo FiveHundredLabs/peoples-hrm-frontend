@@ -22,9 +22,9 @@ import {
   useContracts,
   useCreateContract,
   useSkills,
-} from '../api/lifecycle-api';
-import { useEmployees } from '../../employee/api/employee-api';
-import { useDepartments, useBranches } from '../../organization/api/organization-api';
+} from '../data/lifecycle-data';
+import { useEmployees } from '../../employee/data/employee-data';
+import { useDepartments, useBranches } from '../../organization/data/organization-data';
 import { cn } from '../../../lib/utils';
 import { ProbationReview, MovementType } from '../types/lifecycle';
 

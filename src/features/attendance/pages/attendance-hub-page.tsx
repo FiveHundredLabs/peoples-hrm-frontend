@@ -22,9 +22,9 @@ import {
   useCreateShift,
   useExceptions,
   useIngestBiometricPunch,
-} from '../api/attendance-api';
-import { useEmployees } from '../../employee/api/employee-api';
-import { useBranches } from '../../organization/api/organization-api';
+} from '../data/attendance-data';
+import { useEmployees } from '../../employee/data/employee-data';
+import { useBranches } from '../../organization/data/organization-data';
 import { AttendanceDayStatus } from '../types/attendance';
 import { cn } from '../../../lib/utils';
 

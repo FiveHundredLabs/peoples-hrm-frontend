@@ -77,7 +77,7 @@ export const useAuthStore = create<AuthState>()(
       },
     }),
     {
-      name: 'sri-lanka-hrms-auth',
+      name: 'sri-lanka-hrms-mock-auth',
       partialize: (state) => ({
         user: state.user,
         isAuthenticated: state.isAuthenticated,

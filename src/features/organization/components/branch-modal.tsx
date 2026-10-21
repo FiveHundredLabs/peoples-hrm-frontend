@@ -8,7 +8,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { branchSchema, BranchFormValues } from '../schemas/organization.schema';
 import { Branch, LegalEntity } from '../types/organization';
-import { useCreateBranch, useUpdateBranch } from '../api/organization-api';
+import { useCreateBranch, useUpdateBranch } from '../data/organization-data';
 import { AlertCircle } from 'lucide-react';
 
 export interface BranchModalProps {

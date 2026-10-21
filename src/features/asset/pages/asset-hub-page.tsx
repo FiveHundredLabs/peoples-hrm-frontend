@@ -23,8 +23,8 @@ import {
   useAssetAssignments,
   useIssueAsset,
   useReturnAsset,
-} from '../api/asset-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/asset-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { AssetAssignment } from '../types/asset';
 

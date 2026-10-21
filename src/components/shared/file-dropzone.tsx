@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useDropzone, FileRejection } from 'react-dropzone';
 import { UploadCloud, AlertCircle, CheckCircle2, X } from 'lucide-react';
-import { useStorageConfig } from '../../features/rbac/api/storage-api';
+import { useStorageConfig } from '../../features/rbac/data/storage-data';
 import { cn } from '../../lib/utils';
 import { Button } from '../ui/button';
 

@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { useUiStore } from '../../stores/ui-store';
 import { useAuthStore } from '../../stores/auth-store';
-import { useLogout } from '../../features/auth/api/auth-api';
+import { useLogout } from '../../features/auth/data/auth-data';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { Button } from '../ui/button';
 
@@ -138,6 +138,7 @@ export function Header() {
 
       {/* Right: Notifications & Interactive User Profile Dropdown */}
       <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        <span className="text-xs text-[#6b6b6b]">Demo data</span>
         {/* Notifications */}
         <button
           aria-label="Notifications"

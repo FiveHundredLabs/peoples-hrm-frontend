@@ -37,8 +37,8 @@ import {
   useApproveExpenseClaim,
   useRejectExpenseClaim,
   useReimburseExpenseClaim,
-} from '../api/expenses-and-loans-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/expenses-and-loans-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { LoanStatus, ExpenseClaimStatus } from '../types/expenses-and-loans';
 

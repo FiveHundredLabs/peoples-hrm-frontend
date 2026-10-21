@@ -4,28 +4,21 @@
 # ==========================================
 
 # Stage 1: Build static assets
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Install pnpm matching project version
-RUN npm install -g pnpm@10.32.1
-
-# Accept build argument for backend API URL (configure in Dokploy build settings)
-ARG VITE_API_BASE_URL
-ENV VITE_API_BASE_URL=${VITE_API_BASE_URL:-/api/v1}
-
 # Copy dependency specifications
-COPY package.json pnpm-lock.yaml ./
+COPY package.json package-lock.json ./
 
 # Install dependencies with frozen lockfile
-RUN pnpm install --frozen-lockfile
+RUN npm ci
 
 # Copy application source code
 COPY . .
 
 # Build production distribution
-RUN pnpm run build
+RUN npm run build
 
 # Stage 2: Serve with Nginx Alpine
 FROM nginx:alpine AS runner

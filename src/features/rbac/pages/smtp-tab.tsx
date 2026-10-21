@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Mail, RefreshCw, CheckCircle2, AlertCircle, Zap, Shield, Send } from 'lucide-react';
-import { useSmtpConfig, useUpdateSmtpConfig, useTestSmtpConnection } from '../api/smtp-api';
+import { useSmtpConfig, useUpdateSmtpConfig, useTestSmtpConnection } from '../data/smtp-data';
 import { smtpSchema, SmtpFormValues } from '../schemas/smtp.schema';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { Button } from '../../../components/ui/button';
