@@ -24,8 +24,8 @@ import {
   useApproveCompensationChangeRequest,
   useBenefitPlans,
   useCreateBenefitPlan,
-} from '../api/compensation-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/compensation-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { PayrollItemType } from '../types/compensation';
 

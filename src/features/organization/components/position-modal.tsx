@@ -8,7 +8,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { positionSchema, PositionFormValues } from '../schemas/organization.schema';
 import { Position, LegalEntity, Department } from '../types/organization';
-import { useCreatePosition, useUpdatePosition } from '../api/organization-api';
+import { useCreatePosition, useUpdatePosition } from '../data/organization-data';
 import { AlertCircle } from 'lucide-react';
 
 export interface PositionModalProps {

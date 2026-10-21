@@ -23,8 +23,8 @@ import {
   useApproveLeaveRequest,
   useRejectLeaveRequest,
   useLeaveLedger,
-} from '../api/leave-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/leave-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { LeaveRequestStatus, DayPart, LeaveRequest } from '../types/leave';
 import { cn } from '../../../lib/utils';
 

@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from '../../../components/ui/select';
 import { useState } from 'react';
-import { usePositions, useLegalEntities, useDepartments } from '../api/organization-api';
+import { usePositions, useLegalEntities, useDepartments } from '../data/organization-data';
 import { Position } from '../types/organization';
 import { PositionModal } from '../components/position-modal';
 import { Button } from '../../../components/ui/button';

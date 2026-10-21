@@ -1,4 +1,4 @@
-import { useActiveSessions, useRevokeSession } from '../../auth/api/auth-api';
+import { useActiveSessions, useRevokeSession } from '../../auth/data/auth-data';
 import { UserSession } from '../../auth/types/auth';
 import { Button } from '../../../components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../../components/ui/table';

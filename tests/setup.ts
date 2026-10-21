@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 // JSDOM mocks for Radix UI and DOM observers
 class ResizeObserverMock {

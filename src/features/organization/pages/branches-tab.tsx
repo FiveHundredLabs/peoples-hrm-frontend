@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from '../../../components/ui/select';
 import { useState } from 'react';
-import { useBranches, useLegalEntities } from '../api/organization-api';
+import { useBranches, useLegalEntities } from '../data/organization-data';
 import { Branch } from '../types/organization';
 import { BranchModal } from '../components/branch-modal';
 import { Button } from '../../../components/ui/button';
@@ -16,7 +16,7 @@ import { StatusBadge } from '../../../components/shared/status-badge';
 import { EmptyState } from '../../../components/shared/empty-state';
 import { LoadingState } from '../../../components/shared/loading-state';
 import { Plus, Search, MapPin, Edit2, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useDeleteBranch } from '../api/organization-api';
+import { useDeleteBranch } from '../data/organization-data';
 import { DeleteConfirmDialog } from '../../../components/shared/delete-confirm-dialog';
 
 export function BranchesTab() {

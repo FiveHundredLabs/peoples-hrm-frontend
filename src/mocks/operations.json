@@ -1,0 +1,974 @@
+[
+  {
+    "method": "post",
+    "resource": "/auth/login"
+  },
+  {
+    "method": "post",
+    "resource": "/auth/logout"
+  },
+  {
+    "method": "get",
+    "resource": "/auth/me"
+  },
+  {
+    "method": "post",
+    "resource": "/auth/sync-permissions"
+  },
+  {
+    "method": "post",
+    "resource": "/auth/seed-admin"
+  },
+  {
+    "method": "get",
+    "resource": "/rbac/roles"
+  },
+  {
+    "method": "post",
+    "resource": "/rbac/roles"
+  },
+  {
+    "method": "get",
+    "resource": "/rbac/permissions"
+  },
+  {
+    "method": "post",
+    "resource": "/rbac/roles/:id/permissions"
+  },
+  {
+    "method": "get",
+    "resource": "/rbac/users"
+  },
+  {
+    "method": "post",
+    "resource": "/rbac/users"
+  },
+  {
+    "method": "post",
+    "resource": "/rbac/user-role-assignments"
+  },
+  {
+    "method": "delete",
+    "resource": "/rbac/user-role-assignments/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/rbac/sessions"
+  },
+  {
+    "method": "delete",
+    "resource": "/rbac/sessions/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/health"
+  },
+  {
+    "method": "get",
+    "resource": "/health/detailed"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/legal-entities"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/legal-entities/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/legal-entities"
+  },
+  {
+    "method": "patch",
+    "resource": "/organization/legal-entities/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/organization/legal-entities/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/branches"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/branches"
+  },
+  {
+    "method": "patch",
+    "resource": "/organization/branches/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/organization/branches/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/departments"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/departments"
+  },
+  {
+    "method": "patch",
+    "resource": "/organization/departments/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/organization/departments/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/teams"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/teams"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/jobs"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/positions"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/positions"
+  },
+  {
+    "method": "patch",
+    "resource": "/organization/positions/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/organization/positions/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/work-locations"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/work-locations"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/holiday-calendars"
+  },
+  {
+    "method": "get",
+    "resource": "/organization/holidays"
+  },
+  {
+    "method": "post",
+    "resource": "/organization/holidays"
+  },
+  {
+    "method": "delete",
+    "resource": "/organization/holidays/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/operations/diagnostics"
+  },
+  {
+    "method": "get",
+    "resource": "/operations/settings"
+  },
+  {
+    "method": "put",
+    "resource": "/operations/settings"
+  },
+  {
+    "method": "get",
+    "resource": "/operations/templates"
+  },
+  {
+    "method": "get",
+    "resource": "/operations/notifications"
+  },
+  {
+    "method": "post",
+    "resource": "/operations/notifications"
+  },
+  {
+    "method": "get",
+    "resource": "/operations/webhooks"
+  },
+  {
+    "method": "post",
+    "resource": "/operations/webhooks"
+  },
+  {
+    "method": "patch",
+    "resource": "/operations/webhooks/:id/toggle"
+  },
+  {
+    "method": "get",
+    "resource": "/settings/smtp"
+  },
+  {
+    "method": "put",
+    "resource": "/settings/smtp"
+  },
+  {
+    "method": "post",
+    "resource": "/settings/smtp/test"
+  },
+  {
+    "method": "get",
+    "resource": "/settings/storage"
+  },
+  {
+    "method": "put",
+    "resource": "/settings/storage"
+  },
+  {
+    "method": "post",
+    "resource": "/settings/storage/test"
+  },
+  {
+    "method": "get",
+    "resource": "/employees"
+  },
+  {
+    "method": "get",
+    "resource": "/employees/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/employees"
+  },
+  {
+    "method": "patch",
+    "resource": "/employees/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/bank-accounts"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/assignments"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/documents"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/status"
+  },
+  {
+    "method": "post",
+    "resource": "/storage/upload"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/photo"
+  },
+  {
+    "method": "get",
+    "resource": "/employees/:id/documents"
+  },
+  {
+    "method": "post",
+    "resource": "/employees/:id/documents"
+  },
+  {
+    "method": "patch",
+    "resource": "/employees/:id/documents/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/employees/:id/documents/:id"
+  },
+  {
+    "method": "patch",
+    "resource": "/employees/:id/bank-accounts/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/employees/:id/bank-accounts/:id"
+  },
+  {
+    "method": "delete",
+    "resource": "/employees/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/lifecycle/probation-reviews"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/probation-reviews"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/probation-reviews/:id/submit"
+  },
+  {
+    "method": "get",
+    "resource": "/lifecycle/movements"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/movements"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/movements/:id/approve"
+  },
+  {
+    "method": "get",
+    "resource": "/lifecycle/contracts"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/contracts"
+  },
+  {
+    "method": "get",
+    "resource": "/lifecycle/skills"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/skills"
+  },
+  {
+    "method": "post",
+    "resource": "/lifecycle/qualifications"
+  },
+  {
+    "method": "get",
+    "resource": "/attendance/daily-logs"
+  },
+  {
+    "method": "get",
+    "resource": "/attendance/devices"
+  },
+  {
+    "method": "post",
+    "resource": "/attendance/devices"
+  },
+  {
+    "method": "get",
+    "resource": "/attendance/shifts"
+  },
+  {
+    "method": "post",
+    "resource": "/attendance/shifts"
+  },
+  {
+    "method": "get",
+    "resource": "/attendance/exceptions"
+  },
+  {
+    "method": "post",
+    "resource": "/attendance/regularization"
+  },
+  {
+    "method": "post",
+    "resource": "/attendance/events/ingest"
+  },
+  {
+    "method": "get",
+    "resource": "/leave/types"
+  },
+  {
+    "method": "post",
+    "resource": "/leave/types"
+  },
+  {
+    "method": "get",
+    "resource": "/leave/entitlements"
+  },
+  {
+    "method": "post",
+    "resource": "/leave/entitlements/allocate"
+  },
+  {
+    "method": "get",
+    "resource": "/leave/requests"
+  },
+  {
+    "method": "post",
+    "resource": "/leave/requests"
+  },
+  {
+    "method": "post",
+    "resource": "/leave/requests/:id/approve"
+  },
+  {
+    "method": "post",
+    "resource": "/leave/requests/:id/reject"
+  },
+  {
+    "method": "get",
+    "resource": "/leave/ledger"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/components"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/components"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/plans"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/plans"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/assignments"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/assignments"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/change-requests"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/change-requests"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/change-requests/:id/approve"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/benefits"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/benefits"
+  },
+  {
+    "method": "get",
+    "resource": "/compensation/benefits/enrollments"
+  },
+  {
+    "method": "post",
+    "resource": "/compensation/benefits/enrollments"
+  },
+  {
+    "method": "get",
+    "resource": "/payroll/runs"
+  },
+  {
+    "method": "get",
+    "resource": "/payroll/runs/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/payroll/runs"
+  },
+  {
+    "method": "post",
+    "resource": "/payroll/runs/:id/calculate"
+  },
+  {
+    "method": "post",
+    "resource": "/payroll/runs/:id/approve-hr"
+  },
+  {
+    "method": "post",
+    "resource": "/payroll/runs/:id/approve-finance"
+  },
+  {
+    "method": "post",
+    "resource": "/payroll/runs/:id/finalize"
+  },
+  {
+    "method": "get",
+    "resource": "/payroll/payslips"
+  },
+  {
+    "method": "get",
+    "resource": "/payroll/bank-batches"
+  },
+  {
+    "method": "get",
+    "resource": "/payroll/statutory-rules"
+  },
+  {
+    "method": "get",
+    "resource": "/loans/types"
+  },
+  {
+    "method": "get",
+    "resource": "/loans"
+  },
+  {
+    "method": "get",
+    "resource": "/loans/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/loans"
+  },
+  {
+    "method": "post",
+    "resource": "/loans/:id/approve"
+  },
+  {
+    "method": "post",
+    "resource": "/loans/:id/reject"
+  },
+  {
+    "method": "get",
+    "resource": "/loans/advances/all"
+  },
+  {
+    "method": "post",
+    "resource": "/loans/advances"
+  },
+  {
+    "method": "post",
+    "resource": "/loans/advances/:id/approve"
+  },
+  {
+    "method": "post",
+    "resource": "/loans/advances/:id/reject"
+  },
+  {
+    "method": "get",
+    "resource": "/expenses/policies"
+  },
+  {
+    "method": "get",
+    "resource": "/expenses/claims"
+  },
+  {
+    "method": "get",
+    "resource": "/expenses/claims/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/expenses/claims"
+  },
+  {
+    "method": "post",
+    "resource": "/expenses/claims/:id/approve"
+  },
+  {
+    "method": "post",
+    "resource": "/expenses/claims/:id/reject"
+  },
+  {
+    "method": "post",
+    "resource": "/expenses/claims/:id/reimburse"
+  },
+  {
+    "method": "get",
+    "resource": "/settlements"
+  },
+  {
+    "method": "get",
+    "resource": "/settlements/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/settlements"
+  },
+  {
+    "method": "post",
+    "resource": "/settlements/:id/approve"
+  },
+  {
+    "method": "post",
+    "resource": "/settlements/:id/finalize"
+  },
+  {
+    "method": "post",
+    "resource": "/settlements/calculate-gratuity"
+  },
+  {
+    "method": "get",
+    "resource": "/offboarding/cases"
+  },
+  {
+    "method": "post",
+    "resource": "/offboarding/cases"
+  },
+  {
+    "method": "post",
+    "resource": "/offboarding/tasks/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/statutory/epf-form-c"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/statutory/etf-form-ii"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/statutory/apit-schedule"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/statutory/gratuity-valuation"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/analytics/demographics"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/analytics/attendance"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/analytics/leaves"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/analytics/workforce-cost"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/saved"
+  },
+  {
+    "method": "post",
+    "resource": "/reports/saved"
+  },
+  {
+    "method": "delete",
+    "resource": "/reports/saved/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/schedules"
+  },
+  {
+    "method": "post",
+    "resource": "/reports/schedules"
+  },
+  {
+    "method": "get",
+    "resource": "/reports/audit-events"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/requisitions"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/requisitions"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/candidates"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/candidates"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/applications"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/applications"
+  },
+  {
+    "method": "patch",
+    "resource": "/recruitment/applications/:id/stage"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/interviews"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/interviews"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/interviews/:id/scorecards"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/offers"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/offers"
+  },
+  {
+    "method": "post",
+    "resource": "/recruitment/offers/:id/accept"
+  },
+  {
+    "method": "get",
+    "resource": "/recruitment/onboarding/cases"
+  },
+  {
+    "method": "patch",
+    "resource": "/recruitment/onboarding/tasks/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/performance/cycles"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/cycles"
+  },
+  {
+    "method": "get",
+    "resource": "/performance/rating-scales"
+  },
+  {
+    "method": "get",
+    "resource": "/performance/goals"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/goals"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/goals/:id/progress"
+  },
+  {
+    "method": "get",
+    "resource": "/performance/templates"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/templates"
+  },
+  {
+    "method": "get",
+    "resource": "/performance/reviews"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/reviews/submit-rater"
+  },
+  {
+    "method": "post",
+    "resource": "/performance/reviews/:id/calibrate"
+  },
+  {
+    "method": "get",
+    "resource": "/learning/courses"
+  },
+  {
+    "method": "post",
+    "resource": "/learning/courses"
+  },
+  {
+    "method": "get",
+    "resource": "/learning/sessions"
+  },
+  {
+    "method": "post",
+    "resource": "/learning/sessions"
+  },
+  {
+    "method": "get",
+    "resource": "/learning/assignments"
+  },
+  {
+    "method": "post",
+    "resource": "/learning/assignments"
+  },
+  {
+    "method": "post",
+    "resource": "/learning/assignments/:id/complete"
+  },
+  {
+    "method": "get",
+    "resource": "/assets/categories"
+  },
+  {
+    "method": "post",
+    "resource": "/assets/categories"
+  },
+  {
+    "method": "get",
+    "resource": "/assets"
+  },
+  {
+    "method": "post",
+    "resource": "/assets"
+  },
+  {
+    "method": "patch",
+    "resource": "/assets/:id/status"
+  },
+  {
+    "method": "get",
+    "resource": "/assets/assignments/list"
+  },
+  {
+    "method": "post",
+    "resource": "/assets/issue"
+  },
+  {
+    "method": "post",
+    "resource": "/assets/assignments/:id/return"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/types"
+  },
+  {
+    "method": "post",
+    "resource": "/hr-relations/types"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/cases"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/cases/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/hr-relations/cases"
+  },
+  {
+    "method": "patch",
+    "resource": "/hr-relations/cases/:id/status"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/disciplinary"
+  },
+  {
+    "method": "post",
+    "resource": "/hr-relations/disciplinary"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/safety"
+  },
+  {
+    "method": "post",
+    "resource": "/hr-relations/safety"
+  },
+  {
+    "method": "get",
+    "resource": "/hr-relations/corrective"
+  },
+  {
+    "method": "post",
+    "resource": "/hr-relations/corrective"
+  },
+  {
+    "method": "get",
+    "resource": "/policies"
+  },
+  {
+    "method": "get",
+    "resource": "/policies/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/policies"
+  },
+  {
+    "method": "post",
+    "resource": "/policies/versions"
+  },
+  {
+    "method": "get",
+    "resource": "/policies/acknowledgements/list"
+  },
+  {
+    "method": "post",
+    "resource": "/policies/acknowledge"
+  },
+  {
+    "method": "get",
+    "resource": "/policies/helpdesk/tickets"
+  },
+  {
+    "method": "post",
+    "resource": "/policies/helpdesk/tickets"
+  },
+  {
+    "method": "post",
+    "resource": "/policies/helpdesk/messages"
+  },
+  {
+    "method": "get",
+    "resource": "/helpdesk/tickets"
+  },
+  {
+    "method": "get",
+    "resource": "/helpdesk/tickets/:id"
+  },
+  {
+    "method": "post",
+    "resource": "/helpdesk/tickets"
+  },
+  {
+    "method": "patch",
+    "resource": "/helpdesk/tickets/:id/status"
+  },
+  {
+    "method": "post",
+    "resource": "/helpdesk/messages"
+  },
+  {
+    "method": "get",
+    "resource": "/privacy/consents"
+  },
+  {
+    "method": "post",
+    "resource": "/privacy/consents"
+  },
+  {
+    "method": "get",
+    "resource": "/privacy/retention-policies"
+  },
+  {
+    "method": "post",
+    "resource": "/privacy/retention-policies"
+  },
+  {
+    "method": "get",
+    "resource": "/privacy/dsar"
+  },
+  {
+    "method": "post",
+    "resource": "/privacy/dsar"
+  },
+  {
+    "method": "patch",
+    "resource": "/privacy/dsar/:id"
+  },
+  {
+    "method": "get",
+    "resource": "/privacy/legal-holds"
+  },
+  {
+    "method": "post",
+    "resource": "/privacy/legal-holds"
+  },
+  {
+    "method": "patch",
+    "resource": "/privacy/legal-holds/:id/release"
+  }
+]

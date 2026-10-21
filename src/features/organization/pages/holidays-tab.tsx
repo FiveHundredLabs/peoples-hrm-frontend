@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHolidays, useHolidayCalendars } from '../api/organization-api';
+import { useHolidays, useHolidayCalendars } from '../data/organization-data';
 import { HolidayModal } from '../components/holiday-modal';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';

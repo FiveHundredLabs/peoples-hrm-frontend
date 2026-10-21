@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useUsers, useRoles, useRevokeUserRole } from '../../auth/api/auth-api';
+import { useUsers, useRoles, useRevokeUserRole } from '../../auth/data/auth-data';
 import { User, UserRoleAssignment } from '../../auth/types/auth';
 import { UserModal } from '../components/user-modal';
 import { RoleAssignmentModal } from '../components/role-assignment-modal';

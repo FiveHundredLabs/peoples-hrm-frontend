@@ -15,7 +15,7 @@ import { PageContainer } from '../../../components/shared/page-container';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '../../../components/ui/card';
 import { Button } from '../../../components/ui/button';
 import { Badge } from '../../../components/ui/badge';
-import { useHealthCheck } from '../../health/api/health-api';
+import { useHealthCheck } from '../../health/data/health-data';
 
 interface ModuleCardProps {
   title: string;

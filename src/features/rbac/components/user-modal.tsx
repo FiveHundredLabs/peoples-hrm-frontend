@@ -7,7 +7,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { createUserSchema, CreateUserFormValues } from '../../auth/schemas/auth.schema';
 import { Role } from '../../auth/types/auth';
-import { useCreateUser } from '../../auth/api/auth-api';
+import { useCreateUser } from '../../auth/data/auth-data';
 
 export interface UserModalProps {
   isOpen: boolean;

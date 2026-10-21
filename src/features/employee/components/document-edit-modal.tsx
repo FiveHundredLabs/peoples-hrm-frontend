@@ -5,7 +5,7 @@ import { Input } from '../../../components/ui/input';
 import { Label } from '../../../components/ui/label';
 import { Select } from '../../../components/ui/select';
 import { EmployeeDocument } from '../types/employee';
-import { useUpdateDocument } from '../api/employee-api';
+import { useUpdateDocument } from '../data/employee-data';
 import { AlertCircle } from 'lucide-react';
 
 export interface DocumentEditModalProps {

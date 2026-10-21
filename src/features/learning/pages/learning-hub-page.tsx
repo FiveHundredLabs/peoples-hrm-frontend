@@ -22,8 +22,8 @@ import {
   useLearningAssignments,
   useAssignCourse,
   useCompleteLearningAssignment,
-} from '../api/learning-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/learning-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { LearningAssignment } from '../types/learning';
 

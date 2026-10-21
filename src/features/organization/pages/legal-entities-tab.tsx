@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLegalEntities } from '../api/organization-api';
+import { useLegalEntities } from '../data/organization-data';
 import { LegalEntity } from '../types/organization';
 import { LegalEntityModal } from '../components/legal-entity-modal';
 import { Button } from '../../../components/ui/button';
@@ -9,7 +9,7 @@ import { StatusBadge } from '../../../components/shared/status-badge';
 import { EmptyState } from '../../../components/shared/empty-state';
 import { LoadingState } from '../../../components/shared/loading-state';
 import { Plus, Search, Building2, Edit2, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useDeleteLegalEntity } from '../api/organization-api';
+import { useDeleteLegalEntity } from '../data/organization-data';
 import { DeleteConfirmDialog } from '../../../components/shared/delete-confirm-dialog';
 
 export function LegalEntitiesTab() {

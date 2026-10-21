@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useWorkLocations, useLegalEntities, useBranches } from '../api/organization-api';
+import { useWorkLocations, useLegalEntities, useBranches } from '../data/organization-data';
 import { WorkLocationModal } from '../components/work-location-modal';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';

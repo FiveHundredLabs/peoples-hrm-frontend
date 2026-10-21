@@ -6,7 +6,7 @@ import { Input } from '../../../components/ui/input';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { createRoleSchema, CreateRoleFormValues } from '../../auth/schemas/auth.schema';
 import { Permission } from '../../auth/types/auth';
-import { useCreateRole, useAssignPermissions } from '../../auth/api/auth-api';
+import { useCreateRole, useAssignPermissions } from '../../auth/data/auth-data';
 
 export interface RoleModalProps {
   isOpen: boolean;

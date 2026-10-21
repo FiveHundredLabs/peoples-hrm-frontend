@@ -26,8 +26,8 @@ import {
   useOffboardingCases,
   useCreateOffboardingCase,
   useUpdateOffboardingTask,
-} from '../api/final-settlement-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/final-settlement-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { FinalSettlement, ApprovalStatus, OffboardingStatus, GratuityCalculation } from '../types/final-settlement';
 

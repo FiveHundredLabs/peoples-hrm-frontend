@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { loginSchema, LoginFormValues } from '../schemas/auth.schema';
-import { useLogin, useSeedAdmin } from '../api/auth-api';
+import { useLogin, useSeedAdmin } from '../data/auth-data';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';
 import { Label } from '../../../components/ui/label';
@@ -61,7 +61,7 @@ export function LoginPage() {
         <CardHeader className="pb-4 px-0 pt-0">
           <CardTitle className="text-xl font-bold text-[#262626]">Sign In to Your Workspace</CardTitle>
           <CardDescription className="text-sm text-[#6b6b6b] font-light">
-            Enter your company credentials to access your organization portal.
+            Explore the demo workspace with browser-local mock data.
           </CardDescription>
         </CardHeader>
 
@@ -152,7 +152,7 @@ export function LoginPage() {
 
                 {/* Quick Auto-Fill / Seed Helper */}
                 <div className="pt-4 border-t border-[#e6e6e6] text-center space-y-2">
-                  <p className="text-xs text-[#6b6b6b] font-light">First time setting up your local workspace?</p>
+                  <p className="text-xs text-[#6b6b6b] font-light">Demo mode. Use Auto-fill Admin to sign in. Changes are saved in this browser.</p>
                   <div className="flex items-center justify-center gap-2">
                     <Button
                       type="button"

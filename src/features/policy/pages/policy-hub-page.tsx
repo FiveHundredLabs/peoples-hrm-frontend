@@ -22,8 +22,8 @@ import {
   useAcknowledgePolicy,
   useHelpdeskTickets,
   useCreateHelpdeskTicket,
-} from '../api/policy-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/policy-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 
 export const PolicyHubPage: React.FC = () => {

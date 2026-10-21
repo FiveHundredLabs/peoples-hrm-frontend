@@ -1,6 +1,6 @@
 # Sri Lanka HRMS — Frontend Web Application
 
-Production-ready web application for the Sri Lanka HRMS & Payroll system built with **React 19**, **Vite**, **TypeScript**, **Tailwind CSS v4**, and **shadcn/ui**.
+Frontend demo for the Sri Lanka HRMS & Payroll system built with **React 19**, **Vite**, **TypeScript**, **Tailwind CSS v4**, and **shadcn/ui**. All feature data comes from a browser-local mock layer; no backend is required.
 
 ---
 
@@ -8,7 +8,7 @@ Production-ready web application for the Sri Lanka HRMS & Payroll system built w
 
 - **Framework**: React 19 + Vite 6 + TypeScript
 - **Styling**: Tailwind CSS v4 + Lucide Icons + Radix UI
-- **State Management**: TanStack Query v5 (server cache) + Zustand (client state)
+- **State Management**: TanStack Query v5 (async data cache) + Zustand (client state)
 - **Tables & Forms**: TanStack Table v8 + Formik + Zod validation
 - **Routing**: React Router v7
 - **Deployment**: Nginx Alpine Docker container
@@ -18,38 +18,45 @@ Production-ready web application for the Sri Lanka HRMS & Payroll system built w
 ## Local Development
 
 ### Prerequisites
-- Node.js >= 20
-- `pnpm` (recommended) or `npm`
+- Node.js 22.12+ and `npm`
 
 ### Installation
 ```bash
 # Install dependencies
-pnpm install
+npm ci
 ```
 
 ### Environment Configuration
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-Ensure `VITE_API_BASE_URL` points to your backend instance:
-```env
-VITE_API_BASE_URL=http://localhost:3000/api/v1
-```
+No environment configuration is required. `.env.example` contains only the optional application title.
+
+### Demo data and login
+
+Use **Auto-fill Admin** on the login page, then sign in:
+
+- Email: `admin@ceylonholdings.lk`
+- Password: `Admin@2026!Secure`
+
+The account is available immediately. Authentication and permissions are simulated for UI exploration.
+
+Feature hooks live in `src/features/*/data`. They use `src/mocks/store.ts`, which reads and edits local records without HTTP requests. Customize the example records in `src/mocks/seed.ts`; `defaults.ts` supplies record shapes and `operations.json` lists supported operations.
+
+Edits persist in this browser under `peoples-hrm-mock-v1`. To restore the seed, remove that key in browser developer tools and reload, or call `resetMockData()` in development and clear the query cache. The demo login session uses the separate `sri-lanka-hrms-mock-auth` key.
+
+File uploads are stored locally as data URLs (2 MB per file, subject to browser storage capacity). Email, storage connection tests, notifications, webhooks, payroll and statutory calculations are simulations; they do not contact services, send messages, or perform production financial calculations. Use sample data only.
 
 ### Start Development Server
 ```bash
-pnpm dev
+npm run dev
 ```
 The application will be accessible at `http://localhost:5173`.
 
 ### Typecheck & Build
 ```bash
 # Typecheck
-pnpm run typecheck
+npm run typecheck
 
 # Production build
-pnpm run build
+npm run build
 ```
 
 ---
@@ -74,8 +81,7 @@ Dokploy allows 1-click deployment from GitHub using the included `Dockerfile`.
 2. Click **Create Application**.
 3. Select **GitHub** as the source provider and select your `hrms-frontend` repository.
 4. Set Build Type to **Dockerfile** (Dokploy will automatically detect `Dockerfile` in the repository root).
-5. (Optional) Set Build Arguments or Environment Variables:
-   - `VITE_API_BASE_URL`: e.g. `https://api.yourdomain.com/api/v1` or `/api/v1`
+5. No backend URL or API build arguments are needed.
 6. Under **Domains**, add your domain (e.g. `hrms.yourdomain.com` or `app.yourdomain.com`). Set container port to `80`.
 7. Click **Deploy**.
 

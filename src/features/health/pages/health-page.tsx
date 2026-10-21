@@ -1,4 +1,4 @@
-import { useDetailedHealth } from '../api/health-api';
+import { useDetailedHealth } from '../data/health-data';
 import { PageContainer } from '../../../components/shared/page-container';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../../../components/ui/card';
 import { Badge } from '../../../components/ui/badge';
@@ -12,7 +12,7 @@ export function HealthPage() {
   return (
     <PageContainer
       title="System Health & Infrastructure"
-      description="Real-time infrastructure telemetry, database status, and backend connectivity."
+      description="Demo environment status. Infrastructure metrics are simulated."
       actions={
         <Button
           variant="primary-pill"
@@ -27,15 +27,14 @@ export function HealthPage() {
       }
     >
       {isLoading ? (
-        <LoadingState message="Checking backend and infrastructure health..." />
+        <LoadingState message="Loading demo environment status..." />
       ) : isError ? (
         <Card variant="default" className="border-semantic-error/40 bg-semantic-error/5">
           <CardContent className="flex flex-col items-center justify-center p-8 text-center">
             <AlertCircle className="h-12 w-12 text-semantic-error" />
-            <h3 className="mt-4 text-lg font-bold text-ink">Backend Service Unreachable</h3>
+            <h3 className="mt-4 text-lg font-bold text-ink">Demo Data Unavailable</h3>
             <p className="mt-2 text-sm text-ink-mute max-w-md">
-              Unable to establish a connection with the NestJS API server at <code>/api/v1/health/detailed</code>.
-              Ensure the backend server is running on port 3000.
+              Unable to load local demo data. Reload the page to try again.
             </p>
             <Button
               variant="primary-pill"
@@ -73,11 +72,11 @@ export function HealthPage() {
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center gap-2">
                     <Server className="h-5 w-5 text-primary" />
-                    <span>NestJS API Server</span>
+                    <span>Local Demo Environment</span>
                   </CardTitle>
                   <Badge variant="success">Online</Badge>
                 </div>
-                <CardDescription>REST API Gateway</CardDescription>
+                <CardDescription>Browser-local mock data</CardDescription>
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
                 <div className="flex justify-between py-1 border-b border-hairline">
@@ -85,8 +84,8 @@ export function HealthPage() {
                   <span className="font-semibold text-ink">HTTP/REST</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-hairline">
-                  <span className="text-ink-mute">API Prefix:</span>
-                  <span className="font-mono text-xs text-ink">/api/v1</span>
+                  <span className="text-ink-mute">Data source:</span>
+                  <span className="font-mono text-xs text-ink">Browser storage</span>
                 </div>
                 <div className="flex justify-between py-1">
                   <span className="text-ink-mute">Status:</span>

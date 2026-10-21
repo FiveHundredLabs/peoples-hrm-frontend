@@ -5,7 +5,7 @@ import { Input } from '../../../components/ui/input';
 import { Label } from '../../../components/ui/label';
 import { Select } from '../../../components/ui/select';
 import { FileDropzone } from '../../../components/shared/file-dropzone';
-import { useUploadFile, useAddEmployeeDocument } from '../api/employee-api';
+import { useUploadFile, useAddEmployeeDocument } from '../data/employee-data';
 
 export interface DocumentUploadModalProps {
   isOpen: boolean;

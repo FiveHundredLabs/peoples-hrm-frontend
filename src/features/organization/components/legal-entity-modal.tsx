@@ -7,7 +7,7 @@ import { Label } from '../../../components/ui/label';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { legalEntitySchema, LegalEntityFormValues } from '../schemas/organization.schema';
 import { LegalEntity } from '../types/organization';
-import { useCreateLegalEntity, useUpdateLegalEntity } from '../api/organization-api';
+import { useCreateLegalEntity, useUpdateLegalEntity } from '../data/organization-data';
 import { AlertCircle } from 'lucide-react';
 
 export interface LegalEntityModalProps {

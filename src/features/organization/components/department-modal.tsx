@@ -8,7 +8,7 @@ import { Select } from '../../../components/ui/select';
 import { validateWithZod } from '../../../lib/formik-zod-adapter';
 import { departmentSchema, DepartmentFormValues } from '../schemas/organization.schema';
 import { Department, LegalEntity, Branch } from '../types/organization';
-import { useCreateDepartment, useUpdateDepartment } from '../api/organization-api';
+import { useCreateDepartment, useUpdateDepartment } from '../data/organization-data';
 import { AlertCircle } from 'lucide-react';
 
 export interface DepartmentModalProps {

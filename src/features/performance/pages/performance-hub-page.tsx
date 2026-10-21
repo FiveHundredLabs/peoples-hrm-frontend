@@ -22,8 +22,8 @@ import {
   useReviewTemplates,
   usePerformanceReviews,
   useSubmitRaterReview,
-} from '../api/performance-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/performance-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { Goal, PerformanceReview } from '../types/performance';
 

@@ -6,6 +6,7 @@ import {
   SelectValue,
 } from '../../../components/ui/select';
 import React, { useState } from 'react';
+import { getMockFileUrl } from '../../../mocks/store';
 import { Link } from 'react-router-dom';
 import {
   Users,
@@ -22,8 +23,8 @@ import {
 } from 'lucide-react';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';
-import { useEmployees, useDeleteEmployee } from '../api/employee-api';
-import { useDepartments, useLegalEntities } from '../../organization/api/organization-api';
+import { useEmployees, useDeleteEmployee } from '../data/employee-data';
+import { useDepartments, useLegalEntities } from '../../organization/data/organization-data';
 import { EmploymentStatus, Employee } from '../types/employee';
 import { EmployeeCreateDialog } from '../components/employee-create-dialog';
 import { EmployeeEditDialog } from '../components/employee-edit-dialog';
@@ -316,7 +317,7 @@ export const EmployeeListPage: React.FC = () => {
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-none bg-[#1c69d4]/10 text-xs font-bold text-[#1c69d4] overflow-hidden">
                             {avatarFileId ? (
                               <img
-                                src={`/api/v1/storage/files/${avatarFileId}/view`}
+                                src={getMockFileUrl(avatarFileId)}
                                 alt={emp.displayName}
                                 className="h-full w-full object-cover"
                                 onError={(e) => {

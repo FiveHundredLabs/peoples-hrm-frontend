@@ -24,9 +24,9 @@ import {
   useCreateSafetyIncident,
   useCorrectiveActions,
   useCreateCorrectiveAction,
-} from '../api/hr-relations-api';
-import { useEmployees } from '../../employee/api/employee-api';
-import { useLegalEntities } from '../../organization/api/organization-api';
+} from '../data/hr-relations-data';
+import { useEmployees } from '../../employee/data/employee-data';
+import { useLegalEntities } from '../../organization/data/organization-data';
 import { cn } from '../../../lib/utils';
 
 export const HrRelationsHubPage: React.FC = () => {

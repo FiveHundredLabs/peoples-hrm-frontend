@@ -28,8 +28,8 @@ import {
   usePayslips,
   usePayrollBankBatches,
   useStatutoryRules,
-} from '../api/payroll-api';
-import { useLegalEntities } from '../../organization/api/organization-api';
+} from '../data/payroll-data';
+import { useLegalEntities } from '../../organization/data/organization-data';
 import { cn } from '../../../lib/utils';
 import { PayrollRunStatus, Payslip } from '../types/payroll';
 

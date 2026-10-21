@@ -28,8 +28,8 @@ import {
   useLegalHolds,
   useCreateLegalHold,
   useReleaseLegalHold,
-} from '../api/privacy-api';
-import { useEmployees } from '../../employee/api/employee-api';
+} from '../data/privacy-data';
+import { useEmployees } from '../../employee/data/employee-data';
 import { cn } from '../../../lib/utils';
 import { DataSubjectRequestType } from '../types/privacy';
 

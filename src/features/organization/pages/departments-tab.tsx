@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from '../../../components/ui/select';
 import { useState } from 'react';
-import { useDepartments, useLegalEntities, useBranches } from '../api/organization-api';
+import { useDepartments, useLegalEntities, useBranches } from '../data/organization-data';
 import { Department } from '../types/organization';
 import { DepartmentModal } from '../components/department-modal';
 import { Button } from '../../../components/ui/button';
@@ -16,7 +16,7 @@ import { StatusBadge } from '../../../components/shared/status-badge';
 import { EmptyState } from '../../../components/shared/empty-state';
 import { LoadingState } from '../../../components/shared/loading-state';
 import { Plus, Search, Layers, Edit2, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useDeleteDepartment } from '../api/organization-api';
+import { useDeleteDepartment } from '../data/organization-data';
 import { DeleteConfirmDialog } from '../../../components/shared/delete-confirm-dialog';
 
 export function DepartmentsTab() {

@@ -6,7 +6,7 @@ import {
   ModuleDefinition,
   ModuleCategory,
 } from '../../../stores/module-store';
-import { useUpdateSystemSetting } from '../../operations/api/operations-api';
+import { useUpdateSystemSetting } from '../../operations/data/operations-data';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';
 import { Card } from '../../../components/ui/card';
